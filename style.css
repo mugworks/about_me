@@ -1,0 +1,32 @@
+.rightUpper, .rightLower {
+    width: 45%;
+    float: right;
+    border: 2px solid red;
+    padding: 15px;
+    height: 243.81px;
+    /* clear: right; */
+}
+
+h1 {
+    text-align: center;
+    color: #345487;
+}
+
+.leftUpper, .leftLower {
+    width: 45%;
+    float: left;
+    border: 2px solid red;
+    padding: 15px;
+    height: 243.81px;
+}
+
+.parent {
+    width: 100%;
+    overflow: auto;
+ /*   border: 5px dashed purple;*/
+    padding: 15px;
+
+}
+.questions {
+    padding: 20px;
+}
