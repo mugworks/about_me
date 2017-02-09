@@ -30,3 +30,10 @@ h1 {
 .questions {
     padding: 20px;
 }
+
+
+.top_ten_movies {
+    font-style: italic;
+    font-size: 14pt;
+    padding: 15px;
+}
