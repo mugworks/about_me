@@ -110,18 +110,21 @@ if (employerParkingAnswer.toLowerCase() === 'yes' || employerParkingAnswer.toLow
 console.log('number of correct answers is', numCorrectAnswers);
 
 //Question 6
+function high_low (num) {
+  if (num > 50 || num < 0) {
+    alert('I think you need a geography lesson !');
+  }else if (num > 40) {
+    alert('Too high! Try again.');
+  }else if (num < 40) {
+    alert('Too low! Try again.');
+  }
+}
 var howManyStates;
-var i;
-for (i = 0; i < 4; i++){
+for (var i = 0; i < 4; i++){
   howManyStates = prompt('I love to travel. How many states have I visited so far?');
   console.log('number of states', howManyStates);
-  if (howManyStates > 50 || howManyStates < 0) {
-    alert('I think you need a geography lesson ' + userName + '!');
-  }else if (howManyStates > 40) {
-    alert('Too high! Try again.');
-  }else if (howManyStates < 40) {
-    alert('Too low! Try again.');
-  } else {
+  high_low(howManyStates);
+  if (howManyStates === 40) {
     alert('Correct!!!! You solved it in ' + (i + 1) + ' rounds.');
     numCorrectAnswers = numCorrectAnswers + 1;
     console.log('the correct answer is',howManyStates);
