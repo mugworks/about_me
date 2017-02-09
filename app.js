@@ -9,38 +9,55 @@ console.log(userName);
 var numCorrectAnswers = 0;
 
 
+function correct_answer () {
+  console.log('Your answer is Correct!');
+  alert('Your answer is Correct!');
+  numCorrectAnswers++;
+}
+
+function wrong_answer () {
+  console.log('You are wrong!');
+  alert('You are wrong!');
+}
+
+function try_again () {
+  console.log('I did not understand your answer');
+  alert('I did not understand your answer ' + userName);
+}
+// doILikeDogs, numCorrectAnswers, userName
 //Question 1
 
 var doILikeDogs = prompt('Do I like dogs?');
 
 if (doILikeDogs.toLowerCase() === 'yes' || doILikeDogs.toLowerCase() === 'y') {
-  alert('You answered ' + doILikeDogs + ' and are correct. My first dog was an Alaskan Malemute named Tundra.');
-  numCorrectAnswers = numCorrectAnswers + 1;
+  correct_answer();
 } else if (doILikeDogs === 'no' || doILikeDogs === 'n') {
-  alert('You answered ' + doILikeDogs + ' and are wrong! My current dog is an Australian Shepherd/Flat Coated Retriever mix.');
+  wrong_answer();
 } else {
-  alert('I did not understand your answer ' + userName);
+  try_again();
 }
 console.log('number of correct answers is', numCorrectAnswers);
 
 
 //Question 2
 
-var childhoodHomeAnswer = prompt('Is my childhood home still standing?');
+function question_two () {
+  var childhoodHomeAnswer = prompt('Is my childhood home still standing?');
 
-console.log(childhoodHomeAnswer);
+  console.log(childhoodHomeAnswer);
 
-if (childhoodHomeAnswer.toLowerCase() === 'yes' || childhoodHomeAnswer.toLowerCase() === 'y') {
-  alert('You answered ' + childhoodHomeAnswer + ' and are incorrect. My childhood home is no longer standing but do not be too sad. My husband thought the basement of this house was used in a creepy episode of the X-Files.');
-} else if (childhoodHomeAnswer === 'no' || childhoodHomeAnswer === 'n') {
-  alert('You answered ' + childhoodHomeAnswer + ' and are correct! My childhood home is no longer standing but do not be too sad. My husband thought the basement of this house was used in a creepy episode of the X-Files.');
-  numCorrectAnswers = numCorrectAnswers + 1;
-} else {
-  alert('I did not understand your answer ' + userName);
+  if (childhoodHomeAnswer.toLowerCase() === 'yes' || childhoodHomeAnswer.toLowerCase() === 'y') {
+    wrong_answer();
+  } else if (childhoodHomeAnswer === 'no' || childhoodHomeAnswer === 'n') {
+    correct_answer();
+  } else {
+    alert('I did not understand your answer ' + userName);
+  }
+  console.log('number of correct answers is', numCorrectAnswers);
 }
-console.log('number of correct answers is', numCorrectAnswers);
 
 
+question_two();
 
 //Question 3
 
@@ -65,7 +82,8 @@ var doIPlayDrums = prompt('Do I play the drums?');
 console.log(doIPlayDrums);
 
 if (doIPlayDrums.toLowerCase() === 'yes' || doIPlayDrums.toLowerCase() === 'y') {
-  alert('You said ' + doIPlayDrums + ' but you are wrong. I really wish I had learned to play drums when I was a teenager, ' + userName + '. I think it would be great to learn drums now, as an adult , but my teenage son plays drums and I do not want to make this activity totally uncool for him because his mom does it.');
+  wrong_answer();
+  alert('I really wish I had learned to play drums when I was a teenager, ' + userName + '. I think it would be great to learn drums now, as an adult , but my teenage son plays drums and I do not want to make this activity totally uncool for him because his mom does it.');
 } else if (doIPlayDrums.toLowerCase() === 'no' || doIPlayDrums.toLowerCase() === 'n') {
   alert('You said ' + doIPlayDrums + ' and are correct. I wish I had learned to play drums when I was a teenager, ' + userName + '. I think it would be great to learn drums now, as an adult , but my teenage son plays drums and I do not want to make this activity totally uncool for him because his mom does it.');
   numCorrectAnswers = numCorrectAnswers + 1;
@@ -88,22 +106,25 @@ if (employerParkingAnswer.toLowerCase() === 'yes' || employerParkingAnswer.toLow
   alert(userName + ', you answered ' + employerParkingAnswer + ' and are not correct. When I first started working for Chrysler, my husband and I only had one car and it was built by General Motors. Anyone driving a non-Chrylser car had to park in the very last row of the parking lot.');
 } else {
   alert('I did not understand your answer ' + userName);
-} 
+}
 console.log('number of correct answers is', numCorrectAnswers);
 
 //Question 6
+function high_low (num) {
+  if (num > 50 || num < 0) {
+    alert('I think you need a geography lesson !');
+  }else if (num > 40) {
+    alert('Too high! Try again.');
+  }else if (num < 40) {
+    alert('Too low! Try again.');
+  }
+}
 var howManyStates;
-var i;
-for (i = 0; i < 4; i++){
+for (var i = 0; i < 4; i++){
   howManyStates = prompt('I love to travel. How many states have I visited so far?');
   console.log('number of states', howManyStates);
-  if (howManyStates > 50 || howManyStates < 0) {
-    alert('I think you need a geography lesson ' + userName + '!');
-  }else if (howManyStates > 40) {
-    alert('Too high! Try again.');
-  }else if (howManyStates < 40) {
-    alert('Too low! Try again.');
-  } else {
+  high_low(howManyStates);
+  if (howManyStates === 40) {
     alert('Correct!!!! You solved it in ' + (i + 1) + ' rounds.');
     numCorrectAnswers = numCorrectAnswers + 1;
     console.log('the correct answer is',howManyStates);
