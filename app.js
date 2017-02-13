@@ -24,14 +24,14 @@ function try_again () {
   console.log('I did not understand your answer');
   alert('I did not understand your answer ' + userName);
 }
-// doILikeDogs, numCorrectAnswers, userName
+
 //Question 1
 
 var doILikeDogs = prompt('Do I like dogs?');
 
 if (doILikeDogs.toLowerCase() === 'yes' || doILikeDogs.toLowerCase() === 'y') {
   correct_answer();
-} else if (doILikeDogs === 'no' || doILikeDogs === 'n') {
+} else if (doILikeDogs.toLowerCase === 'no' || doILikeDogs.toLowerCase === 'n') {
   wrong_answer();
 } else {
   try_again();
@@ -48,7 +48,7 @@ function question_two () {
 
   if (childhoodHomeAnswer.toLowerCase() === 'yes' || childhoodHomeAnswer.toLowerCase() === 'y') {
     wrong_answer();
-  } else if (childhoodHomeAnswer === 'no' || childhoodHomeAnswer === 'n') {
+  } else if (childhoodHomeAnswer.toLowerCase === 'no' || childhoodHomeAnswer.toLowerCase === 'n') {
     correct_answer();
   } else {
     alert('I did not understand your answer ' + userName);
@@ -68,7 +68,7 @@ console.log(amICrazy);
 if (amICrazy.toLowerCase() === 'yes' || amICrazy.toLowerCase() === 'y') {
   alert(userName + ' you answered ' + amICrazy + ' and I have to agree with you. I have not traveled with my siblings in decades! I am not sure if all 11 of us will return.');
   numCorrectAnswers = numCorrectAnswers + 1;
-} else if (amICrazy.toLowerCase() === 'no' || amICrazy.toLowerCase === 'n') {
+} else if (amICrazy.toLowerCase() === 'no' || amICrazy.toLowerCase() === 'n') {
   alert(userName + ' you answered ' + amICrazy + '. Perhaps you think this will be a family bonding experience. I hope so. My mother has not travelled with all four of her children since the 1970s.');
 } else {
   alert('I did not understand your answer ' + userName);
