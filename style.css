@@ -1,15 +1,28 @@
+body {
+    background-color: #FFFFFF;
+}
+
+
+
 .rightUpper, .rightLower {
     width: 45%;
-    float: right;
+    float: left;
     border: 2px solid red;
     padding: 15px;
-    height: 243.81px;
-    /* clear: right; */
+    height: 300px;
+    box-shadow: -10px -7px #AA7777;
+    border-radius: 7px;
+    margin:  auto;
+    overflow: scroll;
 }
 
 h1 {
     text-align: center;
-    color: #345487;
+    color: #0c1017;
+    background-color: #e24343;
+    text-shadow: 1px 1px 0px  #79799A;
+    padding: 20px;
+    width: 90%;
 }
 
 .leftUpper, .leftLower {
@@ -17,23 +30,44 @@ h1 {
     float: left;
     border: 2px solid red;
     padding: 15px;
-    height: 243.81px;
+    height: 300px;
+    box-shadow: -10px -7px #AA7777;
+    border-radius: 7px;
+    margin: auto;
+    overflow: scroll;
 }
 
 .parent {
-    width: 100%;
+    width: 90%;
     overflow: auto;
- /*   border: 5px dashed purple;*/
-    padding: 15px;
+    padding: 10px;
+    margin: 20px;
 
 }
-.questions {
+#questions {
+    border: 2px dashed red;
     padding: 20px;
+    margin: auto;
+    width: 600px;
 }
 
+#movies {
+   border: 2px solid red;
+   border-radius: 100px;
+   padding: 50px;
+   width: 300px;
+   margin: auto;
+}
 
-.top_ten_movies {
+#movies h3 {
+    text-align: center;
+    font-style: italic;
+}
+#top_ten_movies {
     font-style: italic;
     font-size: 14pt;
-    padding: 15px;
+}
+
+#vaTech, #washU {
+    float: left;
 }
